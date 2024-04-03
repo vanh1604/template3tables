@@ -22,7 +22,7 @@ class RoomController extends Controller
             'type' => $request->type,
             'status' => $request->status,
         ]);
-        return redirect('/')->with('messages', 'Room created successfully');
+        return redirect('/')->with('message', 'Room created successfully');
     }
     public function show($id)
     {
@@ -37,6 +37,6 @@ class RoomController extends Controller
             $booking->delete();
         }
         $room->delete();
-        return redirect('/')->with('messages', 'Room deleted successfully');
+        return redirect('/')->with('message', 'Room deleted successfully');
     }
 }
